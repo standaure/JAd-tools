@@ -1,0 +1,1 @@
+# JAd-config-checker
