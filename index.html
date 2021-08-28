@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <form>
+        <div>
+            <label for="positionFilter">Position filter: </label><input id="positionFilter" type="text" value="rectangle_atf">
+        </div>
+        <div>
+            <label for="networkFilter">Network filter: </label><input id="networkFilter" type="text" value="120157152">
+        </div>
+        <div>
+            <label for="adunitFilter">Ad unit filter: </label><input id="adunitFilter" type="text" value="_FR_">
+        </div>
+        <div>
+            <button type="button" onclick="updateData()">Update</button>
+        </div>
+    </form>
+
+    <script src="app2.js"></script>
+
+    <style>
+        td {
+            text-align: center;
+            padding: 0.5em 0px;
+        }
+        table {
+            table-layout: fixed;
+            overflow: hidden;
+            width: 100%;
+        }
+        thead tr th:first-child,
+        tbody tr td:first-child {
+            width: 25em;
+            min-width: 25em;
+            max-width: 25em;
+            word-break: break-all;
+            text-align: left;
+        }
+        .red {
+            color: rgb(95, 0, 0);
+            background-color: rgb(196, 142, 142);
+        }
+        .green {
+            color: rgb(0, 61, 0);
+            background-color: rgb(188, 228, 188);
+        }
+
+    </style>
+</body>
+</html>
