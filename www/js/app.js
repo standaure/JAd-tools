@@ -88,7 +88,7 @@ async function buildAllPageSlotsFromLibraryLinkElements(libraryLinkElements) {
 } 
 
 function createTableFromFilters(positionFilter, networkFilter, adunitFilter) {
-    var libraryLinkElements = buildLibraryLinkElementsFromJadDirectoryUrl('http://cdn.api.getjad.io/library/')
+    var libraryLinkElements = buildLibraryLinkElementsFromJadDirectoryUrl('https://cdn.api.getjad.io/library/')
         .then(libraryLinkElements => {
             var allPageSlots = buildAllPageSlotsFromLibraryLinkElements(libraryLinkElements)
                 .then(allPageSlots => {
