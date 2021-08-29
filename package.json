@@ -4,7 +4,9 @@
   "description": "Jad-tools is a set of tools to help JAd users take quicker actions thanks to summary overviews of their setup ",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "server.js",
+    "start": "server.js",
+    "build": "server.js"
   },
   "repository": {
     "type": "git",
