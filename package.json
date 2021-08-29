@@ -4,9 +4,9 @@
   "description": "Jad-tools is a set of tools to help JAd users take quicker actions thanks to summary overviews of their setup ",
   "main": "server.js",
   "scripts": {
-    "test": "server.js",
-    "start": "server.js",
-    "build": "server.js"
+    "test": "npm start",
+    "start": "npm start",
+    "build": "npm install"
   },
   "repository": {
     "type": "git",
