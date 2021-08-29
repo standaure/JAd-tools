@@ -1,0 +1,19 @@
+{
+  "name": "jad-tools",
+  "version": "1.0.0",
+  "description": "Jad-tools is a set of tools to help JAd users take quicker actions thanks to summary overviews of their setup ",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dnsdrs/JAd-tools.git"
+  },
+  "author": "dnsdrs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dnsdrs/JAd-tools/issues"
+  },
+  "homepage": "https://github.com/dnsdrs/JAd-tools#readme"
+}
