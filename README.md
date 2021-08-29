@@ -1,1 +1,1 @@
-# JAd-config-checker
+# JAd-checker
