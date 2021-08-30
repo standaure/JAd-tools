@@ -3,6 +3,7 @@ function createBidderCheckerFromFilters(bidderFilter, networkFilter, adunitFilte
         .then(libraryLinkElements => {
             var allPageSlots = buildAllPageSlotsFromLibraryLinkElements(libraryLinkElements)
                 .then(allPageSlots => {
+                    console.log(allPageSlots)
                     var allPositions = [];
                     for (const [pageStlotName, pageSlotData] of Object.entries(allPageSlots)) {
                         if (pageStlotName.includes(networkFilter) && pageStlotName.includes(adunitFilter)) {
@@ -28,9 +29,9 @@ function createBidderCheckerFromFilters(bidderFilter, networkFilter, adunitFilte
                                 if (typeof pageSlotData[position] == "undefined") {
                                     adUnitData.push("n/a")
                                 } else if (typeof pageSlotData[position].prebidConfig == "undefined") {
-                                    adUnitData.push(false)
+                                    adUnitData.push("no hb")
                                 } else if (typeof pageSlotData[position].prebidConfig.bids == "undefined") {
-                                    adUnitData.push(false)
+                                    adUnitData.push("no hb")
                                 } else {
                                     var isPresent = false;
                                     for (el of pageSlotData[position].prebidConfig.bids) {

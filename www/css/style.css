@@ -121,3 +121,8 @@ tbody tr td:first-child {
   color: #cfcfcf;
   background-color: #f1f1f1;
 }
+
+.no_hb {
+  color: #4c4a45;
+  background-color: #cfcac0;
+}

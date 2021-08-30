@@ -17,6 +17,8 @@ function createTable(tableData) {
             cell.classList.add("red")
         } else if (cellData === "n/a") {
             cell.classList.add("na")
+        } else if (cellData === "no hb") {
+            cell.classList.add("no_hb")
         }
         cell.appendChild(document.createTextNode(cellData));
         row.appendChild(cell);
