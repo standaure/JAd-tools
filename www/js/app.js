@@ -83,7 +83,6 @@ async function buildAllPageSlotsFromLibraryLinkElements(libraryLinkElements) {
             allPageSlots[key] = content[key]
         }
     }
-
     return allPageSlots
 } 
 
@@ -92,7 +91,6 @@ function createTableFromFilters(positionFilter, networkFilter, adunitFilter) {
         .then(libraryLinkElements => {
             var allPageSlots = buildAllPageSlotsFromLibraryLinkElements(libraryLinkElements)
                 .then(allPageSlots => {
-                    console.log(allPageSlots);
                     var allBidders = [];
                     var allUniqueBidders = [];
                     for (const [pageStlotName, pageSlotData] of Object.entries(allPageSlots)) {
@@ -112,7 +110,6 @@ function createTableFromFilters(positionFilter, networkFilter, adunitFilter) {
                         allBidders.push(...uniqueAdUnitBidders)
                     }
                     allUniqueBidders = allBidders.filter(onlyUnique)
-                    console.log(allUniqueBidders)
                     var adUnitsData = [];
                     for (const [pageStlotName, pageSlotData] of Object.entries(allPageSlots)) {
                         var adUnitData = [];
@@ -144,7 +141,6 @@ function createTableFromFilters(positionFilter, networkFilter, adunitFilter) {
                     allUniqueBidders.unshift("adunits");
                     tableData.push(allUniqueBidders);
                     tableData.push(...adUnitsData);
-                    console.table(tableData);
                     createTable(tableData)
                 })
         })
