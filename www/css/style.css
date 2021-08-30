@@ -89,12 +89,13 @@ form > div {
 td {
   text-align: center;
   padding: 0.5em 0px;
+  min-width: 75px;
 }
 
 table {
   table-layout: fixed;
   overflow: hidden;
-  width: 100%;
+  font-size: 14px;
 }
 
 thead tr th:first-child,
@@ -114,4 +115,9 @@ tbody tr td:first-child {
 .green {
   color: rgb(0, 61, 0);
   background-color: rgb(188, 228, 188);
+}
+
+.na {
+  color: #cfcfcf;
+  background-color: #f1f1f1;
 }
