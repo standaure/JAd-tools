@@ -42,7 +42,7 @@ nav {
 }
 
 .logo {
-  background: no-repeat center/80% url(/www/logo.svg);
+  background: no-repeat center/80% url("../logo.svg");
   width: 110px;
   height: 56px;
   display: flex;
