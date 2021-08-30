@@ -1,0 +1,14 @@
+git add .  
+>> ajout de tous les fichiers modifiés à un commit
+
+git commit -m "sujet du commit"
+>> commit avec message
+
+git push -u origin main
+>> push du commit sur la branche main (du remote origin)
+
+git remote --v   
+>> afficher les remotes
+
+git status
+>> afficher les fichiers modifiés
