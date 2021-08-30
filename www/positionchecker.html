@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JAd tools - position checker</title>
+    <link rel="icon" href="/favicon.ico" sizes="any"><!-- 32×32 -->
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png"><!-- 180×180 -->
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="theme-color" content="rgb(50, 105, 60)">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html" class="href"><div class="logo"><span class="tools">🧰</span></div></a>
+
+        <form>
+            <div>
+                <label for="positionFilter">Position filter: </label><input id="positionFilter" type="text" value="rectangle_atf">
+            </div>
+            <div>
+                <label for="networkFilter">Network filter: </label><input id="networkFilter" type="text" value="120157152">
+            </div>
+            <div>
+                <label for="adunitFilter">Ad unit filter: </label><input id="adunitFilter" type="text" value="_FR_">
+            </div>
+            <div>
+                <button type="button" onclick="updateData()">Update</button>
+            </div>
+        </form>
+    </nav>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
