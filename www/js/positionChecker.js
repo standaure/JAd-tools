@@ -42,7 +42,7 @@ function createPositionCheckerFromFilters(positionFilter, networkFilter, adunitF
                                                 return
                                             }
                                         }
-                                        if (!isPresent) {adUnitData.push(false)}
+                                        if (!isPresent) { adUnitData.push(false) }
                                     }
                                 })
                                 adUnitsData.push(adUnitData)
@@ -54,11 +54,13 @@ function createPositionCheckerFromFilters(positionFilter, networkFilter, adunitF
                     tableData.push(allUniqueBidders);
                     tableData.push(...adUnitsData);
                     createTable(tableData)
+                    document.querySelector("#loader").style.display = "none";
                 })
         })
 }
 
 function updateData() {
+    document.querySelector("#loader").style.display = "flex";
     var positionFilter = document.getElementById("positionFilter").value;
     var networkFilter = document.getElementById("networkFilter").value;
     var adunitFilter = document.getElementById("adunitFilter").value;
@@ -66,5 +68,4 @@ function updateData() {
     createPositionCheckerFromFilters(positionFilter, networkFilter, adunitFilter)
 }
 
-createPositionCheckerFromFilters("rectangle_atf","120157152","_FR_")
-
+createPositionCheckerFromFilters("rectangle_atf", "120157152", "_FR_")

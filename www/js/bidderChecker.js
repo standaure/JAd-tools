@@ -41,7 +41,7 @@ function createBidderCheckerFromFilters(bidderFilter, networkFilter, adunitFilte
                                             return
                                         }
                                     }
-                                    if (!isPresent) {adUnitData.push(false)}
+                                    if (!isPresent) { adUnitData.push(false) }
                                 }
                             })
                             adUnitsData.push(adUnitData)
@@ -52,11 +52,13 @@ function createBidderCheckerFromFilters(bidderFilter, networkFilter, adunitFilte
                     tableData.push(allUniquePositions);
                     tableData.push(...adUnitsData);
                     createTable(tableData)
+                    document.querySelector("#loader").style.display = "none";
                 })
         })
 }
 
 function updateData() {
+    document.querySelector("#loader").style.display = "flex";
     var bidderFilter = document.getElementById("bidderFilter").value;
     var networkFilter = document.getElementById("networkFilter").value;
     var adunitFilter = document.getElementById("adunitFilter").value;
@@ -64,5 +66,4 @@ function updateData() {
     createBidderCheckerFromFilters(bidderFilter, networkFilter, adunitFilter)
 }
 
-createBidderCheckerFromFilters("appnexus","120157152","_FR_")
-
+createBidderCheckerFromFilters("appnexus", "120157152", "_FR_")
