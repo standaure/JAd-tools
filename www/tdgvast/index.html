@@ -91,10 +91,6 @@
             }
             return videoLaunch;
         }
-        // Video player
-        jwplayer("jwplayer-video").on('ready', () => {
-            ga('create', 'UA-54622095-1', 'auto');
-        });
 
         jwplayer("jwplayer-video").on('beforePlay', () => {
             var jwPlayerPlaylist = jwplayer().getPlaylist();
@@ -106,38 +102,11 @@
             custDimensionObj.videoPlayingLength = jwPlayerPlaylist[0].duration;
             custDimensionObj.videoPlayingTitle = recipeData;
             custDimensionObj.vastURL = "";
-            ga('set', 'dimension33', custDimensionObj.videoLaunch);
-            ga('set', 'dimension34', custDimensionObj.videoDisplayContext);
-            ga('set', 'dimension35', custDimensionObj.videoDisplayHostName);
-            ga('set', 'dimension36', "receita");
-            ga('set', 'dimension38', custDimensionObj.videoPlayingTitle);
-            ga('set', 'dimension39', custDimensionObj.videoRelatedEntity);
-            ga('set', 'metric2', duration);
-            ga('set', 'dimension40', mediaId);
-            ga('set', 'dimension41', custDimensionObj.videoRelatedEntityID);
-            if (jwData.dataset.paused == "false") {
-                ga('send', 'event', 'video-player', 'starts', recipeData, {
-                    'nonInteraction': 1
-                });
-            } else {
+            if (jwData.dataset.paused == "false") {} else {
                 jwData.dataset.paused = "false";
             }
         });
 
-        jwplayer("jwplayer-video").on('setupError', () => {
-            ga('create', 'UA-54622095-1', 'auto');
-            var jwData = document.querySelector('#jwplayer-data');
-            if (jwData.dataset.mediaid != null && jwData.dataset.mediaid != "" && jwData.dataset.title != null && jwData.dataset.title != "") {
-                var recipeData = jwData.dataset.mediaid + "-" + jwData.dataset.title;
-                ga('send', 'event', 'video-player', 'crash', recipeData, {
-                    'nonInteraction': 1
-                });
-            } else {
-                ga('send', 'event', 'video-player', 'crash', "não identificado", {
-                    'nonInteraction': 1
-                });
-            }
-        });
 
         // add floating to jwplayer
         jwplayer("jwplayer-video").on('adPlay', () => {
@@ -191,9 +160,6 @@
             var jwPlayerPlaylist = jwplayer().getPlaylist();
             var jwData = document.querySelector('#jwplayer-data');
             var recipeData = jwData.dataset.mediaid + "-" + jwData.dataset.title;
-            ga('send', 'event', 'video-content', 'starts', recipeData, {
-                'nonInteraction': 1
-            });
         });
         //]]>
     </script>
