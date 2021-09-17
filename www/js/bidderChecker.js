@@ -3,7 +3,6 @@ function createBidderCheckerFromFilters(bidderFilter, networkFilter, adunitFilte
         .then(libraryLinkElements => {
             var allPageSlots = buildAllPageSlotsFromLibraryLinkElements(libraryLinkElements)
                 .then(allPageSlots => {
-                    console.log(allPageSlots)
                     var allPositions = [];
                     for (const [pageStlotName, pageSlotData] of Object.entries(allPageSlots)) {
                         if (pageStlotName.includes(networkFilter) && pageStlotName.includes(adunitFilter)) {
@@ -67,3 +66,12 @@ function updateData() {
 }
 
 createBidderCheckerFromFilters("appnexus", "120157152", "_FR_")
+
+var inputFields = document.querySelectorAll("input");
+inputFields.forEach(inputField => {
+    inputField.addEventListener("keydown", function(e) {
+        if (e.code === "Enter") {
+            updateData();
+        }
+    });
+})

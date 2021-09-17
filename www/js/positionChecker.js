@@ -69,3 +69,12 @@ function updateData() {
 }
 
 createPositionCheckerFromFilters("rectangle_atf", "120157152", "_FR_")
+
+var inputFields = document.querySelectorAll("input");
+inputFields.forEach(inputField => {
+    inputField.addEventListener("keydown", function(e) {
+        if (e.code === "Enter") {
+            updateData();
+        }
+    });
+})
